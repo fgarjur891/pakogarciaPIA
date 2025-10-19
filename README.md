@@ -1,0 +1,2 @@
+# pakogarciaPIA
+Ejercicios de clase
