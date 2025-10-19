@@ -2,7 +2,7 @@
 # Crea un programa que pida un número por teclado al usuario y
 # diga si es primo. En caso de que no se introduzca un número
 # o que esta sea menor que 2 se debe mostrar un mensaje de error.
-
+# Autor: Francisco José García Jurado
 divisors = 1
 number = input("Dime un número mayor o igual a 2: ")
 
