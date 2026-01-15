@@ -1,1 +1,131 @@
+Objetivo del ejercicio
+El objetivo de este ejercicio es aprender a transformar un documento XML utilizando hojas de estilo XSL (XSLT), aplicando distintos tipos de transformaciones sin modificar el XML original.
 
+Se trabajarán los conceptos de:
+
+XML como lenguaje de marcas
+
+XSL y XSLT
+
+XPath
+
+Plantillas
+
+Transformaciones XML → HTML
+
+Documento XML de partida
+Crea un archivo llamado bebidas.xml con el siguiente contenido:
+
+ 
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <bebida>
+        <nombre>Café solo</nombre>
+        <precio>1.50</precio>
+        <tipo>caliente</tipo>
+    </bebida>
+    <bebida>
+        <nombre>Café con leche</nombre>
+        <precio>1.80</precio>
+        <tipo>caliente</tipo>
+    </bebida>
+    <bebida>
+        <nombre>Zumo de naranja</nombre>
+        <precio>2.50</precio>
+        <tipo>fría</tipo>
+    </bebida>
+    <bebida>
+        <nombre>Refresco</nombre>
+        <precio>2.00</precio>
+        <tipo>fría</tipo>
+    </bebida>
+</menu>
+⚠️ Importante:
+
+El archivo XML no debe modificarse en ningún momento (salvo para indicar el documento XSL).
+
+Todas las transformaciones se realizarán mediante archivos XSL.
+
+Te será útil lanzar un servidor web local ejecutando:
+
+python -m http.server 8000
+
+y acceder al xml con la url:
+
+http://localhost:8000/menu.xml
+
+Transformación 1 – Listado simple
+Objetivo
+Crear una hoja XSL que genere una página HTML con una lista (<ul>) que muestre solo los nombres de las bebidas.
+
+Requisitos
+Archivo: bebidas_1.xsl
+
+Salida HTML
+
+Mostrar únicamente el nombre de cada bebida
+
+No usar condiciones ni ordenaciones
+
+Transformación 2 – Tabla completa
+Objetivo
+Crear una hoja XSL que muestre las bebidas en una tabla HTML con las columnas:
+
+Nombre
+
+Precio
+
+Tipo
+
+Requisitos
+Archivo: bebidas_2.xsl
+
+Usar una tabla (<table>)
+
+Mostrar todas las bebidas
+
+Transformación 3 – Filtrado por tipo
+Objetivo
+Crear una hoja XSL que muestre solo las bebidas frías.
+
+Requisitos
+Archivo: bebidas_3.xsl
+
+Mostrar nombre y precio
+
+Usar una condición (xsl:if) o un filtro XPath
+
+Transformación 4 – Ordenación por precio
+Objetivo
+Crear una hoja XSL que muestre todas las bebidas ordenadas por precio de mayor a menor.
+
+Requisitos
+Archivo: bebidas_4.xsl
+
+Usar ordenación con xsl:sort
+
+Mostrar nombre y precio
+
+Transformación 5 – Uso de plantillas XSLT
+Objetivo
+Repetir la transformación del listado simple, pero utilizando plantillas XSLT en lugar de bucles directos.
+
+Requisitos
+Archivo: bebidas_5.xsl
+
+Debe incluir:
+
+una plantilla con match="/"
+
+una plantilla con match="bebida"
+
+Usar xsl:apply-templates
+
+Transformación 6 – Condicional visual
+Crear una hoja XSL que:
+
+Muestre todas las bebidas
+
+Si el precio es mayor de 2 €, el nombre debe aparecer en negrita
+
+En caso contrario, debe aparecer en texto normal
