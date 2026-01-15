@@ -19,7 +19,7 @@
             <td> <xsl:value-of select="nombre" /> </td>
             <xsl:choose>
                 <xsl:when test="precio &gt; 2">
-                    <td><em> <xsl:value-of select="precio" /></em></td>
+                    <td><strong> <xsl:value-of select="precio" /></strong></td>
                 </xsl:when>
                 <xsl:otherwise>
                     <td> <xsl:value-of select="precio" /> </td>
@@ -37,3 +37,4 @@
 
 
 </xsl:stylesheet>
+
