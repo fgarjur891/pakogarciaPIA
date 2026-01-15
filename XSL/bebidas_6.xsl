@@ -19,13 +19,13 @@
             <td> <xsl:value-of select="nombre" /> </td>
             <xsl:choose>
                 <xsl:when test="precio &gt; 2">
-                    <td><b> <xsl:value-of select="precio" /></b> </td>
+                    <td><em> <xsl:value-of select="precio" /></em></td>
                 </xsl:when>
                 <xsl:otherwise>
                     <td> <xsl:value-of select="precio" /> </td>
                 </xsl:otherwise>
             </xsl:choose>
-            <td> <xsl:value-of select="tipo" /> </td>
+            <td> <xsl:value-of select="tipo" /></td>
           </tr> 
           </xsl:for-each>
         
@@ -34,5 +34,6 @@
       </body>
     </html>
   </xsl:template>
+
 
 </xsl:stylesheet>
